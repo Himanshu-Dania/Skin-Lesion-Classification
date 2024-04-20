@@ -1,0 +1,10 @@
+<!-- Django combined.html -->
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="file" name="image">
+    <button type="submit">Upload</button>
+</form>
+
+{% if prediction %}
+    <p>The predicted label is: {{ prediction }}</p>
+{% endif %}
